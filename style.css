@@ -1,0 +1,381 @@
+/* General styles for right-to-left alignment and responsive layout */
+
+html, body {
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.root {
+    direction: rtl;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/* Font and text direction settings */
+.rtl-text, .rtl-text * {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+/* Styles for headers */
+.rtl-text h1, .rtl-text h2, .rtl-text h3, .rtl-text h4, .rtl-text h5, .rtl-text h6 {
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 1rem;
+}
+
+/* Styles for paragraphs */
+.rtl-text p {
+    text-align: right;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* Styles for lists */
+.rtl-text ul, .rtl-text ol {
+    text-align: right;
+    direction: rtl;
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+/* Styles for buttons */
+.rtl-text .stButton > button {
+    float: right;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Styles for select boxes */
+.rtl-text .stSelectbox > div[data-baseweb="select"] > div {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Styles for sliders */
+.rtl-text .stSlider > div {
+    direction: ltr;
+}
+.rtl-text .stSlider > div > div > div > div {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Styles for checkboxes */
+.rtl-text .stCheckbox > div {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Styles for tabs */
+.rtl-text .stTabs > div > div > div > div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Styles for expanders */
+.rtl-text .stExpander > details > summary {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Styles for sidebar */
+.sidebar .sidebar-content {
+    direction: rtl;
+    text-align: right;
+    align-self: flex-end;
+}
+
+/* Additional settings for sidebar */
+.sidebar .sidebar-content .block-container {
+    direction: rtl;
+    text-align: right;
+}
+
+.sidebar .sidebar-content input,
+.sidebar .sidebar-content select,
+.sidebar .sidebar-content textarea {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Styles for information cards */
+.info-card {
+    background-color: rgba(240, 242, 246, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-right: 4px solid #4e8cff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Styles for description cards */
+.description-card {
+    background-color: rgba(240, 242, 246, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-right: 4px solid #9c4eff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.description-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Styles for parameter cards */
+.parameter-card {
+    background-color: rgba(240, 242, 246, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-right: 4px solid #4eff9c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.parameter-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive settings */
+@media (max-width: 1200px) {
+    /* Settings for small desktop */
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .row-widget {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Settings for tablet and mobile */
+    .row-widget.stButton {
+        width: 100%;
+    }
+
+    /* Font size adjustments for small screens */
+    .rtl-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .rtl-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .rtl-text h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Settings for cards on small screens */
+    .info-card, .description-card, .parameter-card {
+        padding: 12px;
+    }
+
+    /* Settings for charts and visualizations */
+    .chart-container, .visualization-container {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Settings for mobile */
+    .element-container {
+        margin-bottom: 1rem;
+    }
+
+    /* Font size adjustments for very small screens */
+    .rtl-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .rtl-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .rtl-text h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Settings for forms and inputs */
+    .stTextInput input, .stTextArea textarea, .stSelectbox select {
+        width: 100%;
+    }
+
+    /* Settings for buttons */
+    .stButton button {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    /* Settings for tabs */
+    .stTabs [data-baseweb="tab"] {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Settings for small mobile */
+    .rtl-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .rtl-text h2 {
+        font-size: 1.1rem;
+    }
+
+    .rtl-text h3 {
+        font-size: 1rem;
+    }
+
+    .rtl-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Settings for cards on small mobile */
+    .info-card, .description-card, .parameter-card {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Settings for spacing */
+    .row-widget.stHorizontal {
+        gap: 10px;
+    }
+}
+
+/* Styles for 3D visualization */
+.visualization-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for charts */
+.chart-container {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    box-sizing: border-box;
+    direction: ltr; /* Charts should typically be left-to-right */
+}
+
+/* Settings for chart titles */
+.chart-container .rtl-text {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Styles for progress bar */
+.stProgress > div > div > div > div {
+    background-color: #4e8cff;
+    border-radius: 10px;
+}
+
+/* Styles for success messages */
+.success-message {
+    background-color: rgba(78, 255, 134, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    border-right: 4px solid #4eff86;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Styles for information messages */
+.info-message {
+    background-color: rgba(78, 140, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    border-right: 4px solid #4e8cff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Styles for main title */
+.rtl-text h1:first-child {
+    border-bottom: 2px solid rgba(78, 140, 255, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styles for tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    padding: 10px 16px;
+    border-radius: 4px 4px 0 0;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: rgba(78, 140, 255, 0.1);
+    border-bottom: 2px solid #4e8cff;
+}
+
+/* Styles for spacing between columns */
+.row-widget.stHorizontal {
+    gap: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styles for grids and columns */
+.stColumn {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Styles for forms and inputs */
+input, select, textarea, .stTextInput input, .stTextArea textarea, .stSelectbox select {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Styles for main container */
+.main .block-container {
+    direction: rtl;
+    text-align: right;
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
